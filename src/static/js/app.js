@@ -43,7 +43,7 @@ function TodoListCard() {
         item => {
             const index = items.findIndex(i => i.id === item.id);
             setItems([...items.slice(0, index), ...items.slice(index + 1)]);
-        },
+        },  
         [items],
     );
 
@@ -53,7 +53,7 @@ function TodoListCard() {
         <React.Fragment>
             <AddItemForm onNewItem={onNewItem} />
             {items.length === 0 && (
-                <p className="text-center">You have no todo items yet! Add one above!</p>
+                <p className="text-center">(@DEV) You have no todo items yet! Add one above!</p>
             )}
             {items.map(item => (
                 <ItemDisplay
